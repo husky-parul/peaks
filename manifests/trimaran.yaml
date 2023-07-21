@@ -1,0 +1,284 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scheduler-config
+  namespace: kube-system
+data:
+  scheduler-config.yaml: |
+    apiVersion: kubescheduler.config.k8s.io/v1beta2
+    kind: KubeSchedulerConfiguration
+    leaderElection:
+      leaderElect: false
+    profiles:
+    - schedulerName: trimaran
+      plugins:
+        score:
+          disabled:
+          - name: NodeResourcesBalancedAllocation
+          - name: NodeResourcesLeastAllocated
+          enabled:
+          - name: TargetLoadPacking
+      pluginConfig:
+        - name: TargetLoadPacking
+          args:
+            defaultRequests:
+              cpu: "2000m"
+            defaultRequestsMultiplier: "2"
+            targetUtilization: 70
+            watcherAddress: http://load-watcher.kube-system.svc.cluster.local:2020
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: trimaran
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: trimaran-as-kube-scheduler
+subjects:
+- kind: ServiceAccount
+  name: trimaran
+  namespace: kube-system
+roleRef:
+  kind: ClusterRole
+  name: system:kube-scheduler
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: trimaran-as-node
+subjects:
+- kind: ServiceAccount
+  name: trimaran
+  namespace: kube-system
+roleRef:
+  kind: ClusterRole
+  name: system:node
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: trimaran-as-volume-scheduler
+subjects:
+- kind: ServiceAccount
+  name: trimaran
+  namespace: kube-system
+roleRef:
+  kind: ClusterRole
+  name: system:volume-scheduler
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: trimaran-extension-apiserver
+  namespace: kube-system
+subjects:
+- kind: ServiceAccount
+  name: trimaran
+  namespace: kube-system
+roleRef:
+  kind: Role
+  name: extension-apiserver-authentication-reader
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: trimaran-clusterrole
+rules:
+  - apiGroups:
+      - "*"
+    resources:
+      - endpoints
+      - events
+      - nodes
+      - pods
+      - bindings
+      - pods/binding
+      - pods/status
+      - replicationcontrollers
+      - services
+      - persistentvolumeclaims
+      - persistentvolumes
+      - configmaps
+    verbs:
+      - create
+      - get
+      - update
+      - list
+      - watch
+      - patch
+
+  - apiGroups:
+      - apps
+      - extensions
+    resources:
+      - replicasets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - apps
+    resources:
+      - statefulsets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - policy
+    resources:
+      - poddisruptionbudgets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - "storage.k8s.io"
+    resources:
+      - storageclasses
+      - csinodes
+      - csistoragecapacities
+      - csidrivers
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - "coordination.k8s.io"
+    resources:
+      - leases
+    verbs:
+      - create
+      - get
+      - list
+      - update
+  - apiGroups:
+      - "events.k8s.io"
+    resources:
+      - events
+    verbs:
+      - create
+      - patch
+      - update
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: trimaran-clusterrolebinding
+  namespace: kube-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: trimaran-clusterrole
+subjects:
+  - kind: ServiceAccount
+    name: trimaran
+    namespace: kube-system
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: load-watcher-deployment
+  namespace: kube-system
+  labels:
+    app: load-watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: load-watcher
+  template:
+    metadata:
+      labels:
+        app: load-watcher
+    spec:
+      containers:
+      - name: load-watcher
+        image: quay.io/husky_parul/load_watcher:latest
+        env:
+        - name: LOG_LEVEL
+          value: "DEBUG"
+        - name: METRICS_PROVIDER_NAME
+          value: Prometheus
+        - name: METRICS_PROVIDER_ADDRESS
+          value: http://prometheus-k8s.monitoring.svc.cluster.local:9090
+        ports:
+        - containerPort: 2020
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: kube-system
+  name: load-watcher
+  labels:
+    app: load-watcher
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 2020
+    targetPort: 2020
+    protocol: TCP
+  selector:
+    app: load-watcher
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    component: scheduler
+    tier: control-plane
+  name: trimaran
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      component: scheduler
+      tier: control-plane
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: scheduler
+        tier: control-plane
+        version: second
+    spec:
+      serviceAccountName: trimaran
+      hostNetwork: true
+      containers:
+      - name: trimaran
+        command:
+        - /bin/kube-scheduler
+        - --bind-address=0.0.0.0
+        - --secure-port=10210
+        - --leader-elect=false
+        - --config=/home/scheduler-config.yaml
+        - -v=6
+        image: quay.io/husky_parul/trimaran:latest
+        imagePullPolicy: Always       
+        resources:
+          requests:
+            cpu: '0.1'
+        securityContext:
+          privileged: false
+        volumeMounts: 
+        - mountPath: /shared
+          name: shared
+        - name: scheduler-config
+          mountPath: /home
+      volumes:
+      - name: shared
+        hostPath:
+          path: /tmp
+          type: Directory
+      - name: scheduler-config
+        configMap:
+          name: scheduler-config
