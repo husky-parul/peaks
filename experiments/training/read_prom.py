@@ -30,7 +30,7 @@ else:
     PROMETHEUS = 'http://localhost:9090'
 
 if(os.getenv('STORAGEPATH') != None):
-    PROMETHEUS = os.getenv('STORAGEPATH')
+    STORAGEPATH = os.getenv('STORAGEPATH')
 else:
     print("storage path is not an environment variable, attempting to store locally")
     STORAGEPATH = 'data'

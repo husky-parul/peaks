@@ -5,4 +5,3 @@ COPY metrics.properties /workspace
 COPY requirements.txt /workspace
 RUN pip install -r requirements.txt
 RUN ["mkdir", "data"]
-CMD ["python3", "read_prom.py"]

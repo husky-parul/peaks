@@ -1,0 +1,141 @@
+ Package  Power  From  Kepler , Number  of  CPUs 
+kepler_container_platform_joules_total{container_id="e47bd6eea0aceeb45d15036149c0c2b693b956b0787f34044bf683188af9e57d",container_name="config-reloader",container_namespace="monitoring",mode="dynamic",pod_name="alertmanager-main-1",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="e47bd6eea0aceeb45d15036149c0c2b693b956b0787f34044bf683188af9e57d",container_name="config-reloader",container_namespace="monitoring",mode="idle",pod_name="alertmanager-main-1",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="e62155377f2318471fe38abac3f0accffe1380baca54a01a165bdd79d1ac097c",container_name="blackbox-exporter",container_namespace="monitoring",mode="dynamic",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="e62155377f2318471fe38abac3f0accffe1380baca54a01a165bdd79d1ac097c",container_name="blackbox-exporter",container_namespace="monitoring",mode="idle",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="ee8c866c8710ecb4ae1f612cd0f22faee59cc7c59d238a7e2bbee3c9d662717e",container_name="kube-proxy",container_namespace="kube-system",mode="dynamic",pod_name="kube-proxy-q4swg",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="ee8c866c8710ecb4ae1f612cd0f22faee59cc7c59d238a7e2bbee3c9d662717e",container_name="kube-proxy",container_namespace="kube-system",mode="idle",pod_name="kube-proxy-q4swg",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="f0b5d3199f88aab922cc5b00b7b7bc2bedc70fa61c0bcd109634931b8e1d6100",container_name="kube-state-metrics",container_namespace="monitoring",mode="dynamic",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="f0b5d3199f88aab922cc5b00b7b7bc2bedc70fa61c0bcd109634931b8e1d6100",container_name="kube-state-metrics",container_namespace="monitoring",mode="idle",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="kernel_processes",container_name="kernel_processes",container_namespace="kernel",mode="dynamic",pod_name="kernel_processes",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="kernel_processes",container_name="kernel_processes",container_namespace="kernel",mode="idle",pod_name="kernel_processes",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="system_processes",container_name="system_processes",container_namespace="system",mode="dynamic",pod_name="system_processes",source="acpi"} 0
+kepler_container_platform_joules_total{container_id="system_processes",container_name="system_processes",container_namespace="system",mode="idle",pod_name="system_processes",source="acpi"} 0
+# HELP kepler_container_task_clock_ms_total Aggregated value in task_clock_ms value from bpf
+# TYPE kepler_container_task_clock_ms_total counter
+kepler_container_task_clock_ms_total{container_id="0411ac233ebd509a05eeb1b2c5bcb86bd49329aca5e84bb1692437a561c72926",container_name="kepler-exporter",container_namespace="kepler",pod_name="kepler-exporter-tsq8g",source="bpf"} 503376
+kepler_container_task_clock_ms_total{container_id="0dc03bf2d4722a00b3c76f059b144906bfd8cf45bbbd93d13cb6d404b0560a5d",container_name="prometheus",container_namespace="monitoring",pod_name="prometheus-k8s-0",source="bpf"} 1.6794544e+07
+kepler_container_task_clock_ms_total{container_id="2073ecc887cf5b4934d69a8f753ea0048d26667ae5b3397111ac1fed6a88167b",container_name="kube-rbac-proxy-self",container_namespace="monitoring",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="2b0d07ed4f41db87bacee2fb44865e58627edf956f5f08fbed1eed08c99ae176",container_name="prometheus-adapter",container_namespace="monitoring",pod_name="prometheus-adapter-8dfd8fb8-n92b6",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="3b7068832a600773ff6ed59fbee4f5f5979450b5fa54689d5a272016f811045e",container_name="kube-rbac-proxy",container_namespace="monitoring",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="bpf"} 10342
+kepler_container_task_clock_ms_total{container_id="5aa7fb4923cda29d18efa92f92811282f326722d22ce6ae0c3e52b03fcfe686b",container_name="kube-rbac-proxy",container_namespace="monitoring",pod_name="prometheus-operator-77bf95c47c-ljvtw",source="bpf"} 8698
+kepler_container_task_clock_ms_total{container_id="5bf419525aa8659382c33618f1e9208d9bf9edb27dd76bc4c1a0e43b8e894090",container_name="module-configmap-reloader",container_namespace="monitoring",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="63fc03aca3793334744352d3aa6d35afd6f16685c38fabbe8e97c429275d20c3",container_name="prometheus-adapter",container_namespace="monitoring",pod_name="prometheus-adapter-8dfd8fb8-pjwhm",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="7409fa75e9cd1d0f1f4ecd4d7f180273227427b69827669470c216973fc224f6",container_name="grafana",container_namespace="monitoring",pod_name="grafana-7c94495d4d-5l55d",source="bpf"} 2.640218e+06
+kepler_container_task_clock_ms_total{container_id="86be27fb853cec18c3a88307c97fcb0fdc7fc42dc8118a08a800608c61222ebb",container_name="init-config-reloader",container_namespace="monitoring",pod_name="alertmanager-main-1",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="86c57fede70242ba5e136c011016679ee72547bee6296f7c172b214dd488181d",container_name="prometheus-operator",container_namespace="monitoring",pod_name="prometheus-operator-77bf95c47c-ljvtw",source="bpf"} 14
+kepler_container_task_clock_ms_total{container_id="9777932a824c2856a6b09da1802069c3680bed5a969b883300b65a5c18b082fb",container_name="init-config-reloader",container_namespace="monitoring",pod_name="prometheus-k8s-0",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="a0c9d13a6671b3c5bc7c7783b2059454e2158a73b441d1f27c6de198aaa9ddb3",container_name="kube-rbac-proxy",container_namespace="monitoring",pod_name="node-exporter-qvdbb",source="bpf"} 11228
+kepler_container_task_clock_ms_total{container_id="a23788a0a740b2a6c9f8aac5ce815c780a559dacce6ca01ea46a4f3aff5a746d",container_name="load-watcher",container_namespace="loadwatcher",pod_name="load-watcher-deployment-6f67df544d-nqzct",source="bpf"} 66876
+kepler_container_task_clock_ms_total{container_id="b19b802aeeb8293bda97739b22bf6b0b3194f1f70853ad4695fcf3e09af5f8ce",container_name="estimator",container_namespace="kepler",pod_name="kepler-exporter-tsq8g",source="bpf"} 1.6489602e+07
+kepler_container_task_clock_ms_total{container_id="b716dd90bf895694234560c4b40167f71b94f3838ea2adaf3299ee6297798faf",container_name="alertmanager",container_namespace="monitoring",pod_name="alertmanager-main-1",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="bb047f35091b796c76f85a1e395f73718b4e0723899ce5305be8f3fcb60d58c2",container_name="node-exporter",container_namespace="monitoring",pod_name="node-exporter-qvdbb",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="bfda3c18dd090c125ee9604cf65e876fde3610cd9f11a81b79576a2f29ed1048",container_name="config-reloader",container_namespace="monitoring",pod_name="prometheus-k8s-0",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="d5268c1cf7e81cd28246da4c1d21659c48ffb44b20c20b665f344d0e6e7f5a0f",container_name="metrics-server",container_namespace="kube-system",pod_name="metrics-server-5b68bb6fb5-fcngl",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="dead8ee7e93aa271b247679427f4142c2afa223a33b4ed7c81c1412adad86da1",container_name="kube-rbac-proxy-main",container_namespace="monitoring",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="e47bd6eea0aceeb45d15036149c0c2b693b956b0787f34044bf683188af9e57d",container_name="config-reloader",container_namespace="monitoring",pod_name="alertmanager-main-1",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="e62155377f2318471fe38abac3f0accffe1380baca54a01a165bdd79d1ac097c",container_name="blackbox-exporter",container_namespace="monitoring",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="bpf"} 0
+kepler_container_task_clock_ms_total{container_id="ee8c866c8710ecb4ae1f612cd0f22faee59cc7c59d238a7e2bbee3c9d662717e",container_name="kube-proxy",container_namespace="kube-system",pod_name="kube-proxy-q4swg",source="bpf"} 140822
+kepler_container_task_clock_ms_total{container_id="f0b5d3199f88aab922cc5b00b7b7bc2bedc70fa61c0bcd109634931b8e1d6100",container_name="kube-state-metrics",container_namespace="monitoring",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="bpf"} 44072
+kepler_container_task_clock_ms_total{container_id="kernel_processes",container_name="kernel_processes",container_namespace="kernel",pod_name="kernel_processes",source="bpf"} 3.4546193486e+10
+kepler_container_task_clock_ms_total{container_id="system_processes",container_name="system_processes",container_namespace="system",pod_name="system_processes",source="bpf"} 2.6031884e+07
+# HELP kepler_container_uncore_joules_total Aggregated value in uncore value from intel_rapl
+# TYPE kepler_container_uncore_joules_total counter
+kepler_container_uncore_joules_total{container_id="0411ac233ebd509a05eeb1b2c5bcb86bd49329aca5e84bb1692437a561c72926",container_name="kepler-exporter",container_namespace="kepler",mode="dynamic",pod_name="kepler-exporter-tsq8g",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="0411ac233ebd509a05eeb1b2c5bcb86bd49329aca5e84bb1692437a561c72926",container_name="kepler-exporter",container_namespace="kepler",mode="idle",pod_name="kepler-exporter-tsq8g",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="0dc03bf2d4722a00b3c76f059b144906bfd8cf45bbbd93d13cb6d404b0560a5d",container_name="prometheus",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-k8s-0",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="0dc03bf2d4722a00b3c76f059b144906bfd8cf45bbbd93d13cb6d404b0560a5d",container_name="prometheus",container_namespace="monitoring",mode="idle",pod_name="prometheus-k8s-0",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="2073ecc887cf5b4934d69a8f753ea0048d26667ae5b3397111ac1fed6a88167b",container_name="kube-rbac-proxy-self",container_namespace="monitoring",mode="dynamic",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="2073ecc887cf5b4934d69a8f753ea0048d26667ae5b3397111ac1fed6a88167b",container_name="kube-rbac-proxy-self",container_namespace="monitoring",mode="idle",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="2b0d07ed4f41db87bacee2fb44865e58627edf956f5f08fbed1eed08c99ae176",container_name="prometheus-adapter",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-adapter-8dfd8fb8-n92b6",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="2b0d07ed4f41db87bacee2fb44865e58627edf956f5f08fbed1eed08c99ae176",container_name="prometheus-adapter",container_namespace="monitoring",mode="idle",pod_name="prometheus-adapter-8dfd8fb8-n92b6",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="3b7068832a600773ff6ed59fbee4f5f5979450b5fa54689d5a272016f811045e",container_name="kube-rbac-proxy",container_namespace="monitoring",mode="dynamic",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="3b7068832a600773ff6ed59fbee4f5f5979450b5fa54689d5a272016f811045e",container_name="kube-rbac-proxy",container_namespace="monitoring",mode="idle",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="5aa7fb4923cda29d18efa92f92811282f326722d22ce6ae0c3e52b03fcfe686b",container_name="kube-rbac-proxy",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-operator-77bf95c47c-ljvtw",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="5aa7fb4923cda29d18efa92f92811282f326722d22ce6ae0c3e52b03fcfe686b",container_name="kube-rbac-proxy",container_namespace="monitoring",mode="idle",pod_name="prometheus-operator-77bf95c47c-ljvtw",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="5bf419525aa8659382c33618f1e9208d9bf9edb27dd76bc4c1a0e43b8e894090",container_name="module-configmap-reloader",container_namespace="monitoring",mode="dynamic",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="5bf419525aa8659382c33618f1e9208d9bf9edb27dd76bc4c1a0e43b8e894090",container_name="module-configmap-reloader",container_namespace="monitoring",mode="idle",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="63fc03aca3793334744352d3aa6d35afd6f16685c38fabbe8e97c429275d20c3",container_name="prometheus-adapter",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-adapter-8dfd8fb8-pjwhm",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="63fc03aca3793334744352d3aa6d35afd6f16685c38fabbe8e97c429275d20c3",container_name="prometheus-adapter",container_namespace="monitoring",mode="idle",pod_name="prometheus-adapter-8dfd8fb8-pjwhm",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="7409fa75e9cd1d0f1f4ecd4d7f180273227427b69827669470c216973fc224f6",container_name="grafana",container_namespace="monitoring",mode="dynamic",pod_name="grafana-7c94495d4d-5l55d",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="7409fa75e9cd1d0f1f4ecd4d7f180273227427b69827669470c216973fc224f6",container_name="grafana",container_namespace="monitoring",mode="idle",pod_name="grafana-7c94495d4d-5l55d",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="86be27fb853cec18c3a88307c97fcb0fdc7fc42dc8118a08a800608c61222ebb",container_name="init-config-reloader",container_namespace="monitoring",mode="dynamic",pod_name="alertmanager-main-1",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="86be27fb853cec18c3a88307c97fcb0fdc7fc42dc8118a08a800608c61222ebb",container_name="init-config-reloader",container_namespace="monitoring",mode="idle",pod_name="alertmanager-main-1",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="86c57fede70242ba5e136c011016679ee72547bee6296f7c172b214dd488181d",container_name="prometheus-operator",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-operator-77bf95c47c-ljvtw",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="86c57fede70242ba5e136c011016679ee72547bee6296f7c172b214dd488181d",container_name="prometheus-operator",container_namespace="monitoring",mode="idle",pod_name="prometheus-operator-77bf95c47c-ljvtw",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="9777932a824c2856a6b09da1802069c3680bed5a969b883300b65a5c18b082fb",container_name="init-config-reloader",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-k8s-0",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="9777932a824c2856a6b09da1802069c3680bed5a969b883300b65a5c18b082fb",container_name="init-config-reloader",container_namespace="monitoring",mode="idle",pod_name="prometheus-k8s-0",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="a0c9d13a6671b3c5bc7c7783b2059454e2158a73b441d1f27c6de198aaa9ddb3",container_name="kube-rbac-proxy",container_namespace="monitoring",mode="dynamic",pod_name="node-exporter-qvdbb",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="a0c9d13a6671b3c5bc7c7783b2059454e2158a73b441d1f27c6de198aaa9ddb3",container_name="kube-rbac-proxy",container_namespace="monitoring",mode="idle",pod_name="node-exporter-qvdbb",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="a23788a0a740b2a6c9f8aac5ce815c780a559dacce6ca01ea46a4f3aff5a746d",container_name="load-watcher",container_namespace="loadwatcher",mode="dynamic",pod_name="load-watcher-deployment-6f67df544d-nqzct",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="a23788a0a740b2a6c9f8aac5ce815c780a559dacce6ca01ea46a4f3aff5a746d",container_name="load-watcher",container_namespace="loadwatcher",mode="idle",pod_name="load-watcher-deployment-6f67df544d-nqzct",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="b19b802aeeb8293bda97739b22bf6b0b3194f1f70853ad4695fcf3e09af5f8ce",container_name="estimator",container_namespace="kepler",mode="dynamic",pod_name="kepler-exporter-tsq8g",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="b19b802aeeb8293bda97739b22bf6b0b3194f1f70853ad4695fcf3e09af5f8ce",container_name="estimator",container_namespace="kepler",mode="idle",pod_name="kepler-exporter-tsq8g",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="b716dd90bf895694234560c4b40167f71b94f3838ea2adaf3299ee6297798faf",container_name="alertmanager",container_namespace="monitoring",mode="dynamic",pod_name="alertmanager-main-1",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="b716dd90bf895694234560c4b40167f71b94f3838ea2adaf3299ee6297798faf",container_name="alertmanager",container_namespace="monitoring",mode="idle",pod_name="alertmanager-main-1",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="bb047f35091b796c76f85a1e395f73718b4e0723899ce5305be8f3fcb60d58c2",container_name="node-exporter",container_namespace="monitoring",mode="dynamic",pod_name="node-exporter-qvdbb",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="bb047f35091b796c76f85a1e395f73718b4e0723899ce5305be8f3fcb60d58c2",container_name="node-exporter",container_namespace="monitoring",mode="idle",pod_name="node-exporter-qvdbb",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="bfda3c18dd090c125ee9604cf65e876fde3610cd9f11a81b79576a2f29ed1048",container_name="config-reloader",container_namespace="monitoring",mode="dynamic",pod_name="prometheus-k8s-0",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="bfda3c18dd090c125ee9604cf65e876fde3610cd9f11a81b79576a2f29ed1048",container_name="config-reloader",container_namespace="monitoring",mode="idle",pod_name="prometheus-k8s-0",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="d5268c1cf7e81cd28246da4c1d21659c48ffb44b20c20b665f344d0e6e7f5a0f",container_name="metrics-server",container_namespace="kube-system",mode="dynamic",pod_name="metrics-server-5b68bb6fb5-fcngl",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="d5268c1cf7e81cd28246da4c1d21659c48ffb44b20c20b665f344d0e6e7f5a0f",container_name="metrics-server",container_namespace="kube-system",mode="idle",pod_name="metrics-server-5b68bb6fb5-fcngl",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="dead8ee7e93aa271b247679427f4142c2afa223a33b4ed7c81c1412adad86da1",container_name="kube-rbac-proxy-main",container_namespace="monitoring",mode="dynamic",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="dead8ee7e93aa271b247679427f4142c2afa223a33b4ed7c81c1412adad86da1",container_name="kube-rbac-proxy-main",container_namespace="monitoring",mode="idle",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="e47bd6eea0aceeb45d15036149c0c2b693b956b0787f34044bf683188af9e57d",container_name="config-reloader",container_namespace="monitoring",mode="dynamic",pod_name="alertmanager-main-1",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="e47bd6eea0aceeb45d15036149c0c2b693b956b0787f34044bf683188af9e57d",container_name="config-reloader",container_namespace="monitoring",mode="idle",pod_name="alertmanager-main-1",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="e62155377f2318471fe38abac3f0accffe1380baca54a01a165bdd79d1ac097c",container_name="blackbox-exporter",container_namespace="monitoring",mode="dynamic",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="e62155377f2318471fe38abac3f0accffe1380baca54a01a165bdd79d1ac097c",container_name="blackbox-exporter",container_namespace="monitoring",mode="idle",pod_name="blackbox-exporter-6c9bb6f694-tpbfn",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="ee8c866c8710ecb4ae1f612cd0f22faee59cc7c59d238a7e2bbee3c9d662717e",container_name="kube-proxy",container_namespace="kube-system",mode="dynamic",pod_name="kube-proxy-q4swg",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="ee8c866c8710ecb4ae1f612cd0f22faee59cc7c59d238a7e2bbee3c9d662717e",container_name="kube-proxy",container_namespace="kube-system",mode="idle",pod_name="kube-proxy-q4swg",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="f0b5d3199f88aab922cc5b00b7b7bc2bedc70fa61c0bcd109634931b8e1d6100",container_name="kube-state-metrics",container_namespace="monitoring",mode="dynamic",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="f0b5d3199f88aab922cc5b00b7b7bc2bedc70fa61c0bcd109634931b8e1d6100",container_name="kube-state-metrics",container_namespace="monitoring",mode="idle",pod_name="kube-state-metrics-79f6b7888c-8mbj8",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="kernel_processes",container_name="kernel_processes",container_namespace="kernel",mode="dynamic",pod_name="kernel_processes",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="kernel_processes",container_name="kernel_processes",container_namespace="kernel",mode="idle",pod_name="kernel_processes",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="system_processes",container_name="system_processes",container_namespace="system",mode="dynamic",pod_name="system_processes",source="intel_rapl"} 0
+kepler_container_uncore_joules_total{container_id="system_processes",container_name="system_processes",container_namespace="system",mode="idle",pod_name="system_processes",source="intel_rapl"} 0
+# HELP kepler_exporter_build_info A metric with a constant '1' value labeled by version, revision, branch, goversion from which kepler_exporter was built, and the goos and goarch for the build.
+# TYPE kepler_exporter_build_info gauge
+kepler_exporter_build_info{branch="",goarch="amd64",goos="linux",goversion="go1.20.10",revision="unknown",tags="include_gcs,include_oss,containers_image_openpgp,gssapi,providerless,netgo,osusergo,libbpf,linux,gpu",version=""} 1
+# HELP kepler_node_core_joules_total Aggregated value in core value from intel_rapl
+# TYPE kepler_node_core_joules_total counter
+kepler_node_core_joules_total{instance="kube-worker-171",mode="dynamic",package="0",source="intel_rapl"} 0
+kepler_node_core_joules_total{instance="kube-worker-171",mode="dynamic",package="1",source="intel_rapl"} 0
+kepler_node_core_joules_total{instance="kube-worker-171",mode="dynamic",package="2",source="intel_rapl"} 0
+kepler_node_core_joules_total{instance="kube-worker-171",mode="dynamic",package="3",source="intel_rapl"} 0
+# HELP kepler_node_dram_joules_total Aggregated value in dram value from intel_rapl
+# TYPE kepler_node_dram_joules_total counter
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="dynamic",package="0",source="intel_rapl"} 5.104578841e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="dynamic",package="1",source="intel_rapl"} 4.84566603e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="dynamic",package="2",source="intel_rapl"} 4.683276868e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="dynamic",package="3",source="intel_rapl"} 5.142470923e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="idle",package="0",source="intel_rapl"} 2.027703344e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="idle",package="1",source="intel_rapl"} 2.023335748e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="idle",package="2",source="intel_rapl"} 1.917066769e+06
+kepler_node_dram_joules_total{instance="kube-worker-171",mode="idle",package="3",source="intel_rapl"} 2.110218896e+06
+# HELP kepler_node_info Aggregated value in  value from os
+# TYPE kepler_node_info counter
+kepler_node_info{components_power_source="rapl-sysfs",cpu_architecture="Broadwell",platform_power_source="none",source="os"} 1
+# HELP kepler_node_other_joules_total Aggregated value in other value from intel_rapl
+# TYPE kepler_node_other_joules_total counter
+kepler_node_other_joules_total{instance="kube-worker-171",mode="dynamic",package="socket0",source="intel_rapl"} 0
+kepler_node_other_joules_total{instance="kube-worker-171",mode="idle",package="socket0",source="intel_rapl"} 0
+# HELP kepler_node_package_joules_total Aggregated value in package value from intel_rapl
+# TYPE kepler_node_package_joules_total counter
+kepler_node_package_joules_total{instance="kube-worker-171",mode="dynamic",package="0",source="intel_rapl"} 6.290670324e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="dynamic",package="1",source="intel_rapl"} 6.765362984e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="dynamic",package="2",source="intel_rapl"} 5.653950651e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="dynamic",package="3",source="intel_rapl"} 5.803848676e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="idle",package="0",source="intel_rapl"} 2.368482522e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="idle",package="1",source="intel_rapl"} 2.544651426e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="idle",package="2",source="intel_rapl"} 2.193595472e+06
+kepler_node_package_joules_total{instance="kube-worker-171",mode="idle",package="3",source="intel_rapl"} 2.30543807e+06
+# HELP kepler_node_uncore_joules_total Aggregated value in uncore value from intel_rapl
+# TYPE kepler_node_uncore_joules_total counter
+kepler_node_uncore_joules_total{instance="kube-worker-171",mode="dynamic",package="0",source="intel_rapl"} 0
+kepler_node_uncore_joules_total{instance="kube-worker-171",mode="dynamic",package="1",source="intel_rapl"} 0
+kepler_node_uncore_joules_total{instance="kube-worker-171",mode="dynamic",package="2",source="intel_rapl"} 0
+kepler_node_uncore_joules_total{instance="kube-worker-171",mode="dynamic",package="3",source="intel_rapl"} 0
+# HELP promhttp_metric_handler_errors_total Total number of internal errors encountered by the promhttp metric handler.
+# TYPE promhttp_metric_handler_errors_total counter
+promhttp_metric_handler_errors_total{cause="encoding"} 0
+promhttp_metric_handler_errors_total{cause="gathering"} 0
